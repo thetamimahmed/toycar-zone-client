@@ -1,0 +1,55 @@
+ [
+      {
+        "category": "Sports car",
+        "toys": [
+          {
+            "name": "Majorette Audi R8",
+            "image": "sports_car1.jpg",
+            "price": 19.99,
+            "rating": 4.5
+          },
+          {
+            "name": "Tomica Nissan GT-R",
+            "image": "sports_car2.jpg",
+            "price": 24.99,
+            "rating": 4.2
+          }
+        ]
+      },
+      {
+        "category": "Truck",
+        "toys": [
+          {
+            "name": "Playmobil Dump Truck",
+            "image": "truck1.jpg",
+            "price": 29.99,
+            "rating": 4.7
+          },
+          {
+            "name": "VTech Drop & Go Dump Truck",
+            "image": "truck2.jpg",
+            "price": 34.99,
+            "rating": 4.4
+          }
+        ]
+      },
+      {
+        "category": "Police car",
+        "toys": [
+          {
+            "name": "Bruder Toys Police SUV",
+            "image": "fire_truck1.jpg",
+            "price": 39.99,
+            "rating": 4.8
+          },
+          {
+            "name": "Matchbox Police Cruiser",
+            "image": "fire_truck2.jpg",
+            "price": 44.99,
+            "rating": 4.6
+          }
+        ]
+      }
+]
+  
+  
