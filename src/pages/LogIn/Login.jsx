@@ -4,7 +4,7 @@ import { AuthContext } from "../Provider/AuthProvider";
 import Swal from 'sweetalert2'
 
 const Login = () => {
-    const { LogIn } = useContext(AuthContext)
+    const { LogIn, googleSignIn } = useContext(AuthContext)
 
     const handleLogIn = () => {
         event.preventDefault()
@@ -34,6 +34,22 @@ const Login = () => {
             })
     }
 
+    const handleGoogleSignIn = () =>{
+        googleSignIn()
+        .then((result)=>{
+            const loggedUser = result.user;
+            console.log(loggedUser)
+            Swal.fire({
+                position: 'center',
+                icon: 'success',
+                title: 'Login Successfully',
+                showConfirmButton: false,
+                timer: 1500
+            })
+        })
+        .catch(error => console.log(error))
+    }
+
     return (
         <div className=" min-h-screen max-w-6xl mx-auto">
             <h1 className="text-center text-4xl text-blue font-bold">Login Now</h1>
@@ -60,7 +76,7 @@ const Login = () => {
                         </div>
                     </form>
                     <div className="form-control w-3/4 mx-auto pb-5">
-                        <button className="btn btn-outline btn-secondary">Login with google</button>
+                        <button className="btn btn-outline btn-secondary" onClick={handleGoogleSignIn}>Login with google</button>
                     </div>
                 </div>
             </div>
