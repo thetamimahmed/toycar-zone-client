@@ -5,8 +5,8 @@ const NavBar = () => {
         <li className="text-xl"><Link to="/">Home</Link></li>
         <li className="text-xl"><Link to="/">All Toys</Link></li>
         <li className="text-xl"><Link to="/">Add Toy</Link></li>
-        <li className="text-xl"><Link to="/">LogIn</Link></li>
-        <li className="text-xl"><Link to="/">Sign Up</Link></li>
+        <li className="text-xl"><Link to="/login">LogIn</Link></li>
+        <li className="text-xl"><Link to="/Register">Register</Link></li>
     </>
     return (
         <div className="navbar bg-base-100 py-5 lg:max-w-6xl mx-auto">
