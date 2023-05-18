@@ -1,4 +1,5 @@
 import { useContext } from "react";
+import {Link} from "react-router-dom"
 import { AuthContext } from "../Provider/AuthProvider";
 import Swal from 'sweetalert2'
 
@@ -53,7 +54,7 @@ const Register = () => {
                                 <label className="label">
                                     <span className="label-text">Password</span>
                                 </label>
-                                <input type="text" name="password" placeholder="password" className="input input-bordered" required/>
+                                <input type="password" name="password" placeholder="password" className="input input-bordered" required/>
                             </div>
                             <div className="form-control">
                                 <label className="label">
@@ -62,6 +63,7 @@ const Register = () => {
                                 <input type="text" name="photo" placeholder="photo" className="input input-bordered" required/>
                             </div>
                         </div>
+                        <p className="text-center ">Already Have An Account <Link className="text-pink font-bold" to="/login">LogIn</Link></p>
                         <div className="form-control w-3/4 mx-auto pb-5 mt-6">
                             <input className="primary-btn" type="submit" value="Register" />
                         </div>
