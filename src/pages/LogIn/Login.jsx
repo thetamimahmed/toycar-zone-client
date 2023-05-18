@@ -4,7 +4,8 @@ import { AuthContext } from "../Provider/AuthProvider";
 import Swal from 'sweetalert2'
 
 const Login = () => {
-    const { LogIn, googleSignIn } = useContext(AuthContext)
+    const { LogIn, googleSignIn, user } = useContext(AuthContext)
+    console.log(user)
 
     const handleLogIn = () => {
         event.preventDefault()

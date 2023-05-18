@@ -1,13 +1,21 @@
 import logo from "../assets/car.png"
-import {Link} from "react-router-dom"
+import { Link } from "react-router-dom"
+import { useContext } from "react";
+import { AuthContext } from "../pages/Provider/AuthProvider";
 const NavBar = () => {
+    const { user, logOut } = useContext(AuthContext)
     const navInfo = <>
         <li className="text-xl"><Link to="/">Home</Link></li>
-        <li className="text-xl"><Link to="/">All Toys</Link></li>
-        <li className="text-xl"><Link to="/">Add Toy</Link></li>
-        <li className="text-xl"><Link to="/login">LogIn</Link></li>
-        <li className="text-xl"><Link to="/Register">Register</Link></li>
+        <li className="text-xl"><Link to="/">Blogs</Link></li>
+        <li className="text-xl"><Link to="/">All Toy</Link></li>
+        {user && <> <li className="text-xl"><Link to="/">My Toys</Link></li>
+        <li className="text-xl"><Link to="/">Add A Toy</Link></li></>}
     </>
+    const handleLogOut = () =>{
+        logOut()
+        .then(()=>{})
+        .catch(error => console.log(error))
+    }
     return (
         <div className="navbar bg-base-100 py-5 lg:max-w-6xl mx-auto">
             <div className="navbar-start">
@@ -20,7 +28,7 @@ const NavBar = () => {
                     </ul>
                 </div>
                 <div className="flex items-center">
-                    <img src={logo} className="w-20 d-flex" alt="" />
+                    <img src={logo} className="w-20 hidden md:block" alt="" />
                     <p className="text-3xl font-bold text-pink mt-2"><span className="text-blue">TOYCAR</span> ZONE</p>
                 </div>
             </div>
@@ -30,7 +38,11 @@ const NavBar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <a className="btn">Get started</a>
+                {user ? <div className="flex justify-center items-center">
+                    <button className="log-btn" onClick={handleLogOut}>Logout</button>
+                    <img className="w-14 h-14 rounded-full ml-3" title={user && user.displayName} src={user && user.photoURL} alt="" />
+                </div> : <button className="log-btn"><Link to="/login">LogIn</Link></button>
+                 }   
             </div>
         </div>
     );

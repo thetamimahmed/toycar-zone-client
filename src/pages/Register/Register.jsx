@@ -2,19 +2,17 @@ import { useContext } from "react";
 import {Link} from "react-router-dom"
 import { AuthContext } from "../Provider/AuthProvider";
 import Swal from 'sweetalert2'
+import { updateProfile } from "firebase/auth";
 
 const Register = () => {
     const {signUp} = useContext(AuthContext)
     const handleRegister = event =>{
         event.preventDefault()
         const form = event.target;
-        // const name = form.name.value;
+        const name = form.name.value;
         const email = form.email.value;
         const password = form.password.value;
-        // const photo = form.photo.value;
-        // const userInfo = {
-            //     name, email, password, 
-            // }
+        const photo = form.photo.value;
         signUp(email, password)
         .then(result =>{
             const loggedUser = result.user;
@@ -26,6 +24,16 @@ const Register = () => {
                 showConfirmButton: false,
                 timer: 1500
               })
+
+            updateProfile(loggedUser, {
+                displayName: name, photoURL: photo
+            })
+            .then(() => {
+                
+              })
+              .catch((error) => {
+                console.log(error)
+              });
         })
         .catch(error => {
             console.log(error)

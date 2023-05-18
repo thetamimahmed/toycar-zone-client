@@ -18,3 +18,16 @@ body{
 .primary-btn:hover{
     background-color: #2EBEEF;
 }
+.log-btn{
+    background-color: #2EBEEF;
+    font-size: 18px;
+    color: white;
+    padding: 0px 15px;
+    height: 50px;
+    border-radius: 10px;
+    cursor: pointer;
+    display: inline-block;
+}
+.log-btn:hover{
+    background-color:#FD6698 ;
+}
