@@ -5,3 +5,16 @@
 body{
     font-family: 'Nunito', sans-serif;
 }
+
+.primary-btn{
+    background-color: #FD6698;
+    font-size: 23px;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.primary-btn:hover{
+    background-color: #2EBEEF;
+}
