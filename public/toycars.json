@@ -1,51 +1,63 @@
 [
   {
     "name": "Majorette Audi R8",
-    "image": "sports_car1.jpg",
+    "image": "https://i.ibb.co/cyjtWkp/toysports.jpg",
     "price": 19.99,
     "category": "SportsCar",
     "seller" : "John Wick",
-    "rating": 4.5
+    "rating": 4.5,
+    "quantity": 35,
+    "description": "The Majorette Audi R8 toy car is a scaled-down replica of the popular sports car, capturing its sleek and stylish appearance. Made of durable die-cast metal, it features realistic details like the Audi logo and vibrant paint colors. With rolling wheels, transparent windows, and limited interior details, it offers a miniature representation of the Audi R8. Available in different scales, it is a collectible toy that appeals to car enthusiasts of all ages."
   },
   {
     "name": "Tomica Nissan GT-R",
-    "image": "sports_car2.jpg",
+    "image": "https://i.ibb.co/yWKK9fH/toysports2.jpg",
     "price": 24.99,
     "category": "SportsCar",
     "seller" : "Kim",
-    "rating": 4.2
+    "rating": 4.2,
+    "quantity": 90,
+    "description": "The Tomica Nissan GT-R toy car is a detailed replica of the famous sports car. With its accurate design and vibrant colors, it captures the essence of the Nissan GT-R. Made from durable materials, it features rolling wheels and transparent windows. The toy car proudly displays the Nissan logo and branding. Available in different scales, it offers a realistic representation of the Nissan GT-R in a compact size."
   },
   {
     "name": "Playmobil Dump Truck",
-    "image": "truck1.jpg",
+    "image": "https://i.ibb.co/7WF1Dwz/toytruck.jpg",
     "price": 29.99,
     "category": "Truck",
     "seller" : "Mack Ords",
-    "rating": 4.7
+    "rating": 4.7,
+    "quantity": 123,
+    "description": "The Playmobil Dump Truck is a toy replica of a real dump truck. It is made by Playmobil and is designed to provide an interactive and imaginative play experience. The dump truck features a durable construction with wheels that allow it to move smoothly on various surfaces. It has a tilting bed that can be manually operated to simulate the dumping action. The toy dump truck typically comes with additional accessories such as construction cones or small tools to enhance the play value. Overall, the Playmobil Dump Truck offers a fun and engaging playtime for children, allowing them to role-play and explore the world of construction and transportation."
   },
   {
     "name": "VTech Drop & Go Dump Truck",
-    "image": "truck2.jpg",
+    "image": "https://i.ibb.co/pb7fPBN/toy-truck2.jpg",
     "price": 34.99,
     "category": "Truck",
     "seller" : "Fetch Wick",
-    "rating": 4.4
+    "rating": 4.4,
+    "quantity": 109,
+    "description": "The VTech Drop & Go Dump Truck is a colorful and interactive toy for young children. It comes with colorful balls that can be dropped into the truck's bed. The truck recognizes the balls and responds with fun sounds and phrases while teaching counting. The dump truck's bed can be lifted to release the balls, promoting hand-eye coordination and motor skills. Overall, it offers an engaging and educational play experience for kids."
   },
        
   {
     "name": "Bruder Toys Police SUV",
-    "image": "fire_truck1.jpg",
+    "image": "https://i.ibb.co/J2v6QT8/toypolice.jpg",
     "price": 39.99,
     "category": "PoliceCar",
     "seller" : "Jaon Felix",
-    "rating": 4.8
+    "rating": 4.8,
+    "quantity": 207,
+    "description": "The Bruder Toys Police SUV is a durable and realistic toy replica of a police vehicle. It features opening doors and a detachable roof, adding to the imaginative play. With its sturdy wheels, it can be easily maneuvered. It comes with accessories like a police officer figurine, handcuffs, and a walkie-talkie. This toy encourages creative storytelling and helps develop fine motor skills."
   },
   {
     "name": "Matchbox Police Cruiser",
-    "image": "fire_truck2.jpg",
+    "image": "https://i.ibb.co/gRZJnL2/toypolice2.jpg",
     "price": 44.99,
     "category": "PoliceCar",
     "seller" : "Trent Bolt",
-    "rating": 4.6
+    "rating": 4.6,
+    "quantity": 55,
+    "description": "The Matchbox Police Cruiser is a realistic and compact toy car designed for children. It features a sleek design with authentic decals, resembling a real police vehicle. With smooth-rolling wheels, it allows for dynamic play scenarios. This toy encourages imaginative role-playing as a police officer."
   }
 ]
