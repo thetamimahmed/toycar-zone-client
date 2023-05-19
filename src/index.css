@@ -52,3 +52,20 @@ body{
 .tab-btn:active{
     background-color: #FD6698;
 }
+
+.toyDetails-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FD6698;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    width: 120px;
+    height: 50px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.toyDetails-btn:hover{
+    background-color: #2EBEEF;
+}
