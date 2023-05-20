@@ -18,11 +18,12 @@ const Footer = () => {
                 </div>
             </div>
             <div className="">
-                <p className="text-3xl font-bold text-pink mb-3">Contact Us</p>
+                <p className="text-3xl font-bold text-pink ">Contact Us</p>
                 <div className="flex flex-col space-y-1 text-lg">
                     <p><span>Email:</span> info@toycarzone.com</p>
                     <p><span>Phone:</span>  123-456-7890</p>
                     <p><span>Address:</span> 123 Toy Street, Cityville, USA</p>
+                    <p className="text-xl font-bold text-blue">Follow Us On:</p>
                     <div className="flex space-x-3 text-4xl">
                         <p className="hover:text-[#3b5998] cursor-pointer"><FaFacebookSquare/></p>
                         <p className="hover:text-[#962fbf] cursor-pointer"><FaInstagramSquare/></p>
