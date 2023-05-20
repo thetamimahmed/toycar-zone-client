@@ -7,14 +7,18 @@ const MyToy = () => {
     const {user} = useContext(AuthContext)
     const [toys, setToys] = useState([])
     useEffect(()=>{
-        fetch(`https://toycar-zone-server-thetamimahmed.vercel.app/myToy?email=${user?.email}`)
+        fetch(`https://toycar-zone-server.vercel.app/myToy?email=${user?.email}`)
         .then(res => res.json())
         .then(data => setToys(data))
-    },[])
+    },[user?.email])
 
     
     return (
         <div className="overflow-x-auto mb-10">
+            <div className="flex justify-end my-5">
+                <button className="search-btn mx-5">Low price to high</button>
+                <button  className="search-btn mx-5">High price to low</button>
+            </div>
             <table className="table w-full">
                 {/* head */}
                 <thead>

@@ -1,7 +1,8 @@
 
 const Gallery = () => {
     return (
-        <div className="my-10">
+        <div className="my-10" data-aos="fade-up"
+        data-aos-duration="3000">
             <h1 className="text-center text-4xl font-bold mb-10 text-pink">Recent Captures</h1>
             <div className="flex items-center gap-5 mx-5 flex-wrap md:flex-nowrap">
                 <div className="">

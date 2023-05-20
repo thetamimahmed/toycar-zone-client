@@ -10,13 +10,13 @@ const Toys = () => {
     const [toys, setToys] = useState([])
 
     useEffect(() => {
-        fetch(`https://toycar-zone-server-thetamimahmed.vercel.app/alltoy/${category}`)
+        fetch(`https://toycar-zone-server.vercel.app/alltoy/${category}`)
             .then(res => res.json())
             .then(data => setToys(data))
     }, [category])
 
     return (
-        <div className="max-w-6xl mx-auto my-20">
+        <div className="max-w-6xl mx-auto my-20" data-aos="fade-up">
             <Tabs>
                 <TabList className="flex justify-center space-x-10">
                     <Tab onClick={() => setCategory("SportsCar")} className="tab-btn">Sports Car</Tab>
@@ -25,7 +25,7 @@ const Toys = () => {
                 </TabList>
 
                 <div className="my-14">
-                    <TabPanel className="grid grid-cols-2 gap-4 place-items-center">
+                    <TabPanel className="grid grid-cols-1 lg:grid-cols-2 gap-4 place-items-center">
                         {
                             toys.slice(0, 2).map(toy => <div key={toy._id} className="card card-compact w-96 bg-base-100 shadow-xl">
                                 <figure><img className="h-[300px] rounded-lg" src={toy?.image} alt="Shoes" /></figure>

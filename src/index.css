@@ -76,9 +76,9 @@ body{
     align-items: center;
     background-color: #2EBEEF;
     font-size: 18px;
+    padding: 0px 10px;
     font-weight: bold;
     color: white;
-    width: 120px;
     cursor: pointer;
 }
 .search-btn:hover{

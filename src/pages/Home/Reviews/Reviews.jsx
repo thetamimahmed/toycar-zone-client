@@ -2,7 +2,7 @@ import { Rating } from '@smastrom/react-rating'
 
 const Reviews = () => {
     return (
-        <div className='my-28 max-w-6xl mx-auto'>
+        <div className='my-28 max-w-6xl mx-auto'  data-aos="zoom-in-up" data-aos-duration="1500">
             <h1 className='text-center text-blue text-4xl font-bold'>What They Say</h1>
             <h3 className='text-center text-pink mt-1 mb-10 font-bold'>CUSTOMER TESTIMONIALS</h3>
             <div className="  grid grid-cols-1 lg:grid-cols-3 place-items-center gap-20">
