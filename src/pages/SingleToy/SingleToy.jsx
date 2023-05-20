@@ -1,10 +1,12 @@
-import { useLoaderData } from "react-router-dom"
+import { useLoaderData} from "react-router-dom"
 import { Rating } from '@smastrom/react-rating'
 import '@smastrom/react-rating/style.css'
 
 const SingleToy = () => {
     const toy = useLoaderData()
-    const { name, image, price, category, seller, rating, quantity, description } = toy
+    const { name, image, price, category, seller, rating, quantity, description } = toy ;
+    
+
     return (
         <div className="hero min-h-screen bg-base-200">
             <div className="hero-content flex-col lg:flex-row">

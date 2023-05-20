@@ -12,6 +12,7 @@ body{
     color: white;
     padding: 8px 15px;
     border-radius: 10px;
+    border: 0;
     cursor: pointer;
 }
 

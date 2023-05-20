@@ -8,8 +8,8 @@ const NavBar = () => {
         <li className="text-xl"><Link to="/">Home</Link></li>
         <li className="text-xl"><Link to="/">Blogs</Link></li>
         <li className="text-xl"><Link to="/toys">All Toy</Link></li>
-        {user && <> <li className="text-xl"><Link to="/">My Toys</Link></li>
-        <li className="text-xl"><Link to="/">Add A Toy</Link></li></>}
+        {user && <> <li className="text-xl"><Link to="/myToy">My Toys</Link></li>
+        <li className="text-xl"><Link to="/addToy">Add A Toy</Link></li></>}
     </>
     const handleLogOut = () =>{
         logOut()
