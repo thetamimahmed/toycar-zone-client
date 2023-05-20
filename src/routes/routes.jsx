@@ -7,6 +7,7 @@ import AllToy from "../pages/AllToy/AllToy";
 import Home from "../pages/Home/Home";
 import Login from "../pages/LogIn/Login";
 import MyToy from "../pages/MyToy/MyToy";
+import UpdateToy from "../pages/MyToy/UpdateToy";
 import Register from "../pages/Register/Register";
 import SingleToy from "../pages/SingleToy/SingleToy";
 import PrivateRoute from "./PrivateRoute";
@@ -45,6 +46,11 @@ import PrivateRoute from "./PrivateRoute";
         {
             path: "/myToy",
             element: <PrivateRoute><MyToy></MyToy></PrivateRoute>
+        },
+        {
+            path: "/updateToy/:id",
+            element: <UpdateToy></UpdateToy>,
+            loader : ({params})=> fetch(`http://localhost:5000/toys/${params.id}`)
         },
       ]
     },

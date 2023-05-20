@@ -38,7 +38,7 @@ const MyToy = () => {
                             <td>{toy.price}</td>
                             <td>{toy.description}</td>
                             <td><button className="toyDetails-btn"><Link to={`/toys/${toy._id}`}>View Details</Link></button></td>
-                            <td className="text-2xl text-blue hover:text-pink cursor-pointer"><FaEdit /></td>
+                            <td className="text-2xl text-blue hover:text-pink cursor-pointer"><Link to={`/updateToy/${toy._id}`}><FaEdit /></Link></td>
                             <td className="text-2xl text-blue hover:text-pink cursor-pointer"><FaBitbucket /></td>
                         </tr>
                         })
