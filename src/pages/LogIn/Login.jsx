@@ -1,9 +1,10 @@
-import { useContext } from "react";
-import {Link, useNavigate, useLocation} from 'react-router-dom';
+import { useContext, useState } from "react";
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { AuthContext } from "../Provider/AuthProvider";
 import Swal from 'sweetalert2'
 
 const Login = () => {
+    const [errorMessage, setErrorMessage] = useState("")
     const { LogIn, googleSignIn } = useContext(AuthContext)
     const navigate = useNavigate();
     const location = useLocation()
@@ -25,28 +26,42 @@ const Login = () => {
                     timer: 1500
                 })
                 form.reset()
-                navigate(from, {replace:true})
+                navigate(from, { replace: true })
             })
             .catch(error => {
-                console.log(error)
+                console.log(error.message)
+                setErrorMessage(error.message)
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text:`${errorMessage}`,
+                })
             })
     }
 
-    const handleGoogleSignIn = () =>{
+    const handleGoogleSignIn = () => {
         googleSignIn()
-        .then((result)=>{
-            const loggedUser = result.user;
-            console.log(loggedUser)
-            Swal.fire({
-                position: 'center',
-                icon: 'success',
-                title: 'Login Successfully',
-                showConfirmButton: false,
-                timer: 1500
+            .then((result) => {
+                const loggedUser = result.user;
+                console.log(loggedUser)
+                Swal.fire({
+                    position: 'center',
+                    icon: 'success',
+                    title: 'Login Successfully',
+                    showConfirmButton: false,
+                    timer: 1500
+                })
+                navigate(from, { replace: true })
             })
-            navigate(from, {replace:true})
-        })
-        .catch(error => console.log(error))
+            .catch(error => {
+                console.log(error.message)
+                setErrorMessage(error.message)
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: `${errorMessage}`,
+                })
+            })
     }
 
     return (

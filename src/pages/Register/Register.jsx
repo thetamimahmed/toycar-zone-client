@@ -1,10 +1,11 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import {Link} from "react-router-dom"
 import { AuthContext } from "../Provider/AuthProvider";
 import Swal from 'sweetalert2'
 import { updateProfile } from "firebase/auth";
 
 const Register = () => {
+    const [errorMessage, setErrorMessage] = useState("")
     const {signUp} = useContext(AuthContext)
     const handleRegister = event =>{
         event.preventDefault()
@@ -16,7 +17,6 @@ const Register = () => {
         signUp(email, password)
         .then(result =>{
             const loggedUser = result.user;
-            console.log(loggedUser)
             Swal.fire({
                 position: 'center',
                 icon: 'success',
@@ -36,7 +36,13 @@ const Register = () => {
               });
         })
         .catch(error => {
-            console.log(error)
+            console.log(error.message)
+            setErrorMessage(error.message)
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: `${errorMessage}`,
+              })
         })
     }
     return (
