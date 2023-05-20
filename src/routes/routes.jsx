@@ -4,6 +4,7 @@ import {
 import Main from "../Layout/Main";
 import AddToy from "../pages/AddToy/AddToy";
 import AllToy from "../pages/AllToy/AllToy";
+import ErrorPage from "../pages/ErrorPage/ErrorPage";
 import Home from "../pages/Home/Home";
 import Login from "../pages/LogIn/Login";
 import MyToy from "../pages/MyToy/MyToy";
@@ -15,6 +16,7 @@ import PrivateRoute from "./PrivateRoute";
   const router = createBrowserRouter([
     {
       path: "/",
+      errorElement: <ErrorPage></ErrorPage>,
       element: <Main></Main>,
       children: [
         {
