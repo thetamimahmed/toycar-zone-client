@@ -1,7 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
-import {Link} from "react-router-dom"
-import { FaEdit, FaBitbucket } from "react-icons/fa";
+
+import MyToyTable from "./MyToyTable";
 
 const MyToy = () => {
     const {user} = useContext(AuthContext)
@@ -11,7 +11,8 @@ const MyToy = () => {
         .then(res => res.json())
         .then(data => setToys(data))
     },[])
-    console.log(toys)
+
+    
     return (
         <div className="overflow-x-auto mb-10">
             <table className="table w-full">
@@ -30,18 +31,7 @@ const MyToy = () => {
                 </thead>
                 <tbody>
                     {
-                        toys.map((toy, index)=> {
-                        return <tr key={toy._id}>
-                            <th>{index+1}</th>
-                            <td>{toy.name}</td>
-                            <td>{toy.category}</td>
-                            <td>{toy.price}</td>
-                            <td>{toy.description}</td>
-                            <td><button className="toyDetails-btn"><Link to={`/toys/${toy._id}`}>View Details</Link></button></td>
-                            <td className="text-2xl text-blue hover:text-pink cursor-pointer"><Link to={`/updateToy/${toy._id}`}><FaEdit /></Link></td>
-                            <td className="text-2xl text-blue hover:text-pink cursor-pointer"><FaBitbucket /></td>
-                        </tr>
-                        })
+                        toys.map((toy, index)=> <MyToyTable key={toy._id} toy={toy} index={index}></MyToyTable>)
                     }
                     
                 </tbody>
