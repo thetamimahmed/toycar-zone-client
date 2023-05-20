@@ -70,3 +70,17 @@ body{
 .toyDetails-btn:hover{
     background-color: #2EBEEF;
 }
+.search-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #2EBEEF;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    width: 120px;
+    cursor: pointer;
+}
+.search-btn:hover{
+    background-color: #FD6698;
+}
