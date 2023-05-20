@@ -2,7 +2,7 @@ import { Link } from "react-router-dom"
 import { FaEdit, FaBitbucket } from "react-icons/fa";
 import Swal from "sweetalert2";
 
-const MyToyTable = ({ toy, index }) => {
+const MyToyTable = ({ toy, index, toys, setToys }) => {
 
     const handleDelete = (id) => {
 
@@ -29,6 +29,8 @@ const MyToyTable = ({ toy, index }) => {
                                 'success'
                             )
                         }
+                        const remaining = toys.filter(toyCar => toyCar._id !== id);
+                        setToys(remaining)
                     })
 
             }
