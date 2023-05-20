@@ -1,6 +1,7 @@
 import { useLoaderData} from "react-router-dom"
 import { Rating } from '@smastrom/react-rating'
 import '@smastrom/react-rating/style.css'
+import { Helmet } from "react-helmet-async";
 
 const SingleToy = () => {
     const toy = useLoaderData()
@@ -9,6 +10,9 @@ const SingleToy = () => {
 
     return (
         <div className="hero min-h-screen bg-base-200">
+            <Helmet>
+                <title>Toy Details</title>
+            </Helmet>
             <div className="hero-content flex-col lg:flex-row">
                 <img src={image} className="max-w-sm rounded-lg shadow-2xl" />
                 <div>

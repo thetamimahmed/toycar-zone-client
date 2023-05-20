@@ -6,7 +6,7 @@ const NavBar = () => {
     const { user, logOut } = useContext(AuthContext)
     const navInfo = <>
         <li className="text-xl"><Link to="/">Home</Link></li>
-        <li className="text-xl"><Link to="/">Blogs</Link></li>
+        <li className="text-xl"><Link to="/blogs">Blogs</Link></li>
         <li className="text-xl"><Link to="/toys">All Toy</Link></li>
         {user && <> <li className="text-xl"><Link to="/myToy">My Toys</Link></li>
         <li className="text-xl"><Link to="/addToy">Add A Toy</Link></li></>}

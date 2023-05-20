@@ -1,4 +1,5 @@
 import { useContext, useEffect, useState } from "react";
+import { Helmet } from "react-helmet-async";
 import { AuthContext } from "../Provider/AuthProvider";
 
 import MyToyTable from "./MyToyTable";
@@ -15,6 +16,9 @@ const MyToy = () => {
     
     return (
         <div className="overflow-x-auto mb-10">
+            <Helmet>
+                <title>My Toy</title>
+            </Helmet>
             <div className="flex justify-end my-5">
                 <button className="search-btn mx-5">Low price to high</button>
                 <button  className="search-btn mx-5">High price to low</button>

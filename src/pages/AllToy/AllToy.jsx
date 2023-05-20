@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Helmet } from "react-helmet-async";
 import { useLoaderData, Link } from "react-router-dom"
 const AllToy = () => {
     const allToys = useLoaderData()
@@ -11,6 +12,9 @@ const AllToy = () => {
     }
     return (
         <div className="overflow-x-auto mb-10 p-5">
+            <Helmet>
+                <title>All Toy</title>
+            </Helmet>
             {/* search by toy name  */}
             <div className="my-5 flex justify-center">
                 <input onChange={(e) => { setSearchText(e.target.value) }} type="text" placeholder="Type here" className="input input-bordered w-full max-w-xs rounded-none" />

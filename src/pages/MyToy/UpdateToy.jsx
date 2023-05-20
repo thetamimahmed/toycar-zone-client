@@ -1,6 +1,7 @@
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import {useLoaderData} from "react-router-dom"
+import { Helmet } from "react-helmet-async";
 
 const UpdateToy = () => {
     const toy = useLoaderData()
@@ -31,6 +32,9 @@ const UpdateToy = () => {
     }
     return (
         <div>
+            <Helmet>
+                <title>Update Toy</title>
+            </Helmet>
             <form onSubmit={handleUpdateToy}>
                 <div className="p-5 mb-10">
                     <div className="card-body grid grid-cols-1 lg:grid-cols-2">

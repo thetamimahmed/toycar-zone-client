@@ -4,6 +4,7 @@ import {
 import Main from "../Layout/Main";
 import AddToy from "../pages/AddToy/AddToy";
 import AllToy from "../pages/AllToy/AllToy";
+import Blogs from "../pages/Blogs/Blogs";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
 import Home from "../pages/Home/Home";
 import Login from "../pages/LogIn/Login";
@@ -30,6 +31,10 @@ import PrivateRoute from "./PrivateRoute";
         {
             path: "/register",
             element: <Register></Register>
+        },
+        {
+            path: "/blogs",
+            element: <Blogs></Blogs>
         },
         {
             path: "/toys",

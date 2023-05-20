@@ -1,8 +1,12 @@
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 
 const ErrorPage = () => {
     return (
         <div className="hero min-h-screen" style={{ backgroundImage: `url("https://i.ibb.co/L1pSmnb/error.jpg")`}}>
+            <Helmet>
+                <title>404 Error</title>
+            </Helmet>
             <div className="hero-overlay bg-opacity-75"></div>
             <div className="hero-content text-center text-neutral-content">
                 <div className="max-w-md">
