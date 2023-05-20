@@ -23,7 +23,7 @@ const AddToy = () => {
         }
         console.log(newToy)
 
-        fetch('http://localhost:5000/toys', {
+        fetch('https://toycar-zone-server-thetamimahmed.vercel.app/toys', {
             method: 'POST',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify(newToy)
@@ -33,6 +33,7 @@ const AddToy = () => {
                 console.log(data)
                 if (data.insertedId) {
                     toast("Toy Added Successfully");
+                    form.reset()
                 }
             })
     }
@@ -78,13 +79,13 @@ const AddToy = () => {
                             <label className="label">
                                 <span className="label-text">Price</span>
                             </label>
-                            <input type="number" name="price" placeholder="price" className="input input-bordered" required />
+                            <input type="number" name="price" placeholder="price" className="input input-bordered"  step=".01" required />
                         </div>
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Rating</span>
                             </label>
-                            <input type="number" name="rating" placeholder="Rating" className="input input-bordered" required />
+                            <input type="number" name="rating" placeholder="Rating" className="input input-bordered" step=".01" required />
                         </div>
                         <div className="form-control">
                             <label className="label">

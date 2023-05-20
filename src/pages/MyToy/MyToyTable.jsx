@@ -16,7 +16,7 @@ const MyToyTable = ({ toy, index, toys, setToys }) => {
             confirmButtonText: 'Yes, delete it!'
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/toys/${id}`, {
+                fetch(`https://toycar-zone-server-thetamimahmed.vercel.app/toys/${id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())

@@ -32,12 +32,12 @@ import PrivateRoute from "./PrivateRoute";
         {
             path: "/toys",
             element: <AllToy></AllToy>,
-            loader : ()=> fetch("http://localhost:5000/toys")
+            loader : ()=> fetch("https://toycar-zone-server-thetamimahmed.vercel.app/toys")
         },
         {
             path: "/toys/:id",
             element: <PrivateRoute><SingleToy></SingleToy></PrivateRoute>,
-            loader : ({params})=> fetch(`http://localhost:5000/toys/${params.id}`)
+            loader : ({params})=> fetch(`https://toycar-zone-server-thetamimahmed.vercel.app/toys/${params.id}`)
         },
         {
             path: "/addToy",
@@ -50,7 +50,7 @@ import PrivateRoute from "./PrivateRoute";
         {
             path: "/updateToy/:id",
             element: <UpdateToy></UpdateToy>,
-            loader : ({params})=> fetch(`http://localhost:5000/toys/${params.id}`)
+            loader : ({params})=> fetch(`https://toycar-zone-server-thetamimahmed.vercel.app/toys/${params.id}`)
         },
       ]
     },
