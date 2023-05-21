@@ -16,7 +16,7 @@ const Toys = () => {
     }, [category])
 
     return (
-        <div className="max-w-6xl mx-auto my-20" data-aos="fade-up">
+        <div className="max-w-6xl mx-5 lg:mx-auto my-20" data-aos="fade-up">
             <Tabs>
                 <TabList className="flex justify-center space-x-10">
                     <Tab onClick={() => setCategory("SportsCar")} className="tab-btn">Sports Car</Tab>
@@ -46,9 +46,9 @@ const Toys = () => {
                             </div>)
                         }
                     </TabPanel>
-                    <TabPanel className="grid grid-cols-2 place-items-center">
+                    <TabPanel className="grid grid-cols-1 lg:grid-cols-2 gap-4 place-items-center">
                         {
-                            toys.map(toy => <div key={toy._id} className="card card-compact w-96 bg-base-100 shadow-xl">
+                            toys.slice(0, 2).map(toy => <div key={toy._id} className="card card-compact w-96 bg-base-100 shadow-xl">
                                 <figure><img className="h-[300px] rounded-lg" src={toy?.image} alt="Shoes" /></figure>
                                 <div className="card-body">
                                     <h2 className="card-title">{toy?.name}</h2>
@@ -67,9 +67,9 @@ const Toys = () => {
                             </div>)
                         }
                     </TabPanel>
-                    <TabPanel className="grid grid-cols-2 place-items-center">
+                    <TabPanel className="grid grid-cols-1 lg:grid-cols-2 gap-4 place-items-center">
                         {
-                            toys.map(toy => <div key={toy._id} className="card card-compact w-96 bg-base-100 shadow-xl">
+                            toys.slice(0, 2).map(toy => <div key={toy._id} className="card card-compact w-96 bg-base-100 shadow-xl">
                                 <figure><img className="h-[300px] rounded-lg" src={toy?.image} alt="Shoes" /></figure>
                                 <div className="card-body">
                                     <h2 className="card-title">{toy?.name}</h2>
