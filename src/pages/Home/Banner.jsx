@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 const Banner = () => {
     return (
@@ -6,7 +7,7 @@ const Banner = () => {
                 <h1 className="text-blue text-3xl lg:text-5xl font-bold text-center my-2 lg:w-3/4 leading-tight">Rev Up Your Imagination! Discover the Ultimate Toy Car Wonderland!</h1>
                 <p className="text-lightPink text-xl  text-center my-2 lg:w-3/4">
                     Unleash your imagination with our thrilling toy car collection. From sleek sports cars to rugged off-road vehicles, ignite endless fun and excitement. Explore our selection now!</p>
-                <button className="primary-btn">Explore Now</button>
+                <Link to="/toys"><button className="primary-btn">Explore Now</button></Link>
             </div>
         </div>
     );

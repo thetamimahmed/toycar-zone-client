@@ -2,6 +2,7 @@ import { useContext, useState } from "react";
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { AuthContext } from "../Provider/AuthProvider";
 import Swal from 'sweetalert2'
+import { Helmet } from "react-helmet-async";
 
 const Login = () => {
     const [errorMessage, setErrorMessage] = useState("")
@@ -66,6 +67,9 @@ const Login = () => {
 
     return (
         <div className=" min-h-screen max-w-6xl mx-auto">
+            <Helmet>
+                <title>ToyCar Zone - Login</title>
+            </Helmet>
             <h1 className="text-center text-4xl text-blue font-bold">Login Now</h1>
             <div className="hero-content">
                 <div className="card  w-1/2 shadow-2xl bg-base-100">

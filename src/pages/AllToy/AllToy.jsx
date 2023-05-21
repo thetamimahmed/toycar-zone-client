@@ -29,6 +29,7 @@ const AllToy = () => {
                         <th>Toy Name</th>
                         <th>Sub-category</th>
                         <th>Price</th>
+                        <th>Quantity</th>
                         <th></th>
                     </tr>
                 </thead>
@@ -41,6 +42,7 @@ const AllToy = () => {
                                 <td>{toy.name}</td>
                                 <td>{toy.category}</td>
                                 <td>${toy.price}</td>
+                                <td>{toy.quantity}</td>
                                 <td><button className="toyDetails-btn"><Link to={`/toys/${toy._id}`}>View Details</Link></button></td>
                             </tr>
                         })

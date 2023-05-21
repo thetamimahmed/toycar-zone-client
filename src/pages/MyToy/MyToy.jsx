@@ -19,7 +19,7 @@ const MyToy = () => {
     return (
         <div className="overflow-x-auto mb-10">
             <Helmet>
-                <title>My Toy</title>
+                <title>ToyCar Zone - My Toy</title>
             </Helmet>
             <div className="my-5 flex justify-center">
                 <select onClick={(e)=>{setSelected(e.target.value)}} className="select select-bordered  max-w-xs">
@@ -35,6 +35,7 @@ const MyToy = () => {
                         <th>Toy Name</th>
                         <th>Sub-category</th>
                         <th>Price</th>
+                        <th>Quantity</th>
                         <th>Description</th>
                         <th></th>
                         <th></th>

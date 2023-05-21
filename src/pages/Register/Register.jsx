@@ -49,7 +49,7 @@ const Register = () => {
     return (
         <div className=" min-h-screen max-w-6xl mx-auto">
             <Helmet>
-                <title>Register</title>
+                <title>ToyCar Zone - Register</title>
             </Helmet>
             <h1 className="text-center text-4xl text-blue font-bold">Register Now</h1>
             <div className="hero-content">

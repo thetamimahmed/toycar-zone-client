@@ -11,7 +11,7 @@ const SingleToy = () => {
     return (
         <div className="hero min-h-screen bg-base-200">
             <Helmet>
-                <title>Toy Details</title>
+                <title>ToyCar Zone - Toy Details</title>
             </Helmet>
             <div className="hero-content flex-col lg:flex-row">
                 <img src={image} className="max-w-sm rounded-lg shadow-2xl" />
@@ -29,7 +29,7 @@ const SingleToy = () => {
                                 readOnly
                             />
                         </div>
-                        <p className="py-6">{description}</p>
+                        <p className="py-6">Description: {description}</p>
                     </div>
                 </div>
             </div>

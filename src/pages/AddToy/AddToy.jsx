@@ -41,7 +41,7 @@ const AddToy = () => {
     return (
         <div>
             <Helmet>
-                <title>Add Toy</title>
+                <title>ToyCar Zone - Add Toy</title>
             </Helmet>
             <h1 className='text-4xl font-bold text-pink text-center mt-5'>Add Your Toy</h1>
             

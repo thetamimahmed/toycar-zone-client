@@ -9,12 +9,12 @@ const NavBar = () => {
         <li className="text-xl"><Link to="/blogs">Blogs</Link></li>
         <li className="text-xl"><Link to="/toys">All Toy</Link></li>
         {user && <> <li className="text-xl"><Link to="/myToy">My Toys</Link></li>
-        <li className="text-xl"><Link to="/addToy">Add A Toy</Link></li></>}
+            <li className="text-xl"><Link to="/addToy">Add A Toy</Link></li></>}
     </>
-    const handleLogOut = () =>{
+    const handleLogOut = () => {
         logOut()
-        .then(()=>{})
-        .catch(error => console.log(error))
+            .then(() => { })
+            .catch(error => console.log(error))
     }
     return (
         <div className="navbar bg-base-100 py-5 lg:max-w-6xl mx-auto">
@@ -27,10 +27,12 @@ const NavBar = () => {
                         {navInfo}
                     </ul>
                 </div>
-                <div className="flex items-center">
-                    <img src={logo} className="w-20 hidden md:block" alt="" />
-                    <p className="text-3xl font-bold text-pink mt-2"><span className="text-blue">TOYCAR</span> ZONE</p>
-                </div>
+                <Link to="/">
+                    <div className="flex items-center">
+                        <img src={logo} className="w-20 hidden md:block" alt="" />
+                        <p className="text-3xl font-bold text-pink mt-2"><span className="text-blue">TOYCAR</span> ZONE</p>
+                    </div>
+                </Link>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
@@ -42,7 +44,7 @@ const NavBar = () => {
                     <button className="log-btn" onClick={handleLogOut}>Logout</button>
                     <img className="w-14 h-14 rounded-full ml-3" title={user && user.displayName} src={user && user.photoURL} alt="" />
                 </div> : <button className="log-btn"><Link to="/login">LogIn</Link></button>
-                 }   
+                }
             </div>
         </div>
     );

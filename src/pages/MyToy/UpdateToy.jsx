@@ -33,7 +33,7 @@ const UpdateToy = () => {
     return (
         <div>
             <Helmet>
-                <title>Update Toy</title>
+                <title>ToyCar Zone - Update Toy</title>
             </Helmet>
             <form onSubmit={handleUpdateToy}>
                 <div className="p-5 mb-10">
