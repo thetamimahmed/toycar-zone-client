@@ -88,6 +88,7 @@ const Toys = () => {
                             </div>)
                         }
                     </TabPanel>
+                   
                 </div>
             </Tabs>
         </div>
