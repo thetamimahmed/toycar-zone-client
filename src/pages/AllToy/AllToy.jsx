@@ -40,7 +40,7 @@ const AllToy = () => {
                                 <td>{toy.seller}</td>
                                 <td>{toy.name}</td>
                                 <td>{toy.category}</td>
-                                <td>{toy.price}</td>
+                                <td>${toy.price}</td>
                                 <td><button className="toyDetails-btn"><Link to={`/toys/${toy._id}`}>View Details</Link></button></td>
                             </tr>
                         })
