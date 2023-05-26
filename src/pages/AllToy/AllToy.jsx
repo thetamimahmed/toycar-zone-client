@@ -20,6 +20,7 @@ const AllToy = () => {
                 <input onChange={(e) => { setSearchText(e.target.value) }} type="text" placeholder="Type here" className="input input-bordered w-full max-w-xs rounded-none" />
                 <button onClick={handleSearchToy} className="search-btn rounded-none">Search</button>
             </div>
+            {/* table  */}
             <table className="table w-full">
                 <thead>
                     <tr>
