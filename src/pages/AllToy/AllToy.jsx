@@ -21,7 +21,6 @@ const AllToy = () => {
                 <button onClick={handleSearchToy} className="search-btn rounded-none">Search</button>
             </div>
             <table className="table w-full">
-                {/* head */}
                 <thead>
                     <tr>
                         <th></th>
